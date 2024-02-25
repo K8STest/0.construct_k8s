@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-svc
+  labels:
+    app: nginx
+spec:
+  selector:
+    app: nginx-deploy #所有匹配到这些标签的pod，都可以通过该service进行访问
+  ports:   #端口映射
+  - port: 80  #service 自己的端口，在使用内网IP访问时使用
+    targetPort: 80   # 目标pod的端口
+    name: web     #为段口起个名字
+  type: NodePort  #随机启动一个端口(30000-32767)映射到pods中的端口，该端口是直接绑定到node上面的，且集群中每一个node 都会绑定这个端口
+                  # 也可以用于将服务暴露给外部访问，但是这种方式实际生产环境不推荐，效率较低，而且service是四层负载，无法处理https请求头
