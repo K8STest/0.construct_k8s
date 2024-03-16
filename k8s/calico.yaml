@@ -16,6 +16,7 @@ spec:
       k8s-app: calico-kube-controllers
 ---
 # Source: calico/templates/calico-kube-controllers.yaml
+
 apiVersion: v1
 kind: ServiceAccount
 metadata:
