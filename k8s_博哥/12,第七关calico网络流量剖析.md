@@ -255,6 +255,8 @@ calico/node is not ready: BIRD is not ready: BGP not established with x.x.x.x,y.
 
 ## 解决问题时相关命令记录
 
+calicoctl node status
+
 # 删除冲突的已注册 calico 节点
 
 calicoctl delete node aws-na-k8s-temp1
