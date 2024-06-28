@@ -28,7 +28,9 @@ cd /root/kafka/
 # 这里还有一系列操作 镜像不能下载的问题 ，可以参考截图
 
 https://github.com/AbelLiuKai/docker_image_pusher/actions/workflows/docker.yaml
+
 https://www.bilibili.com/video/BV1Py411877t/?spm_id_from=333.788.top_right_bar_window_dynamic.content.click&vd_source=b9464c0ecfa02375d34808b56bd7e53f
+
 https://cr.console.aliyun.com/cn-hangzhou/instance/repositories
 
 docker-compose.yml
