@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-go-app
+  namespace: goapp
+  labels:
+    app: my-go-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-go-app
+  template:
+    metadata:
+      labels:
+        app: my-go-app
+    spec:
+      containers:
+      - name: my-go-app
+        image: harbor.boge.com/goapp/my-go-app:latest
+        ports:
+        - containerPort: 9096
+      imagePullSecrets:
+      - name: goapp
+
